@@ -43,8 +43,6 @@ app.use('/air-quality', airQualityRoutes);
 app.use('/history', historyRoutes);
 app.use('/cities', cityRoutes);
 
-
-// app.get("/weather", async (req, res) => {
 //   try {
 //     const { city, day } = req.query;
 //     if (!day) {
