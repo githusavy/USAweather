@@ -1,0 +1,82 @@
+@import "~@fortawesome/fontawesome-free/css/all.css";
+
+.title {
+  padding-top: 60px;
+  margin-left: 500px;
+  font-weight: 900;
+  position: relative;
+  font-size: xx-large;
+  color: white;
+}
+
+.title-card {
+  background-color: #0a2b82;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.select-wrapper {
+  width: 300px;
+  margin-left: 600px;
+  margin-top: 30px;
+}
+
+.section-title {
+  margin-left: 600px;
+  margin-top: 25px;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+mat-card {
+  width: 230px;
+  margin-bottom: 20px;
+}
+
+mat-card-header {
+  background-color: #7dcdec;
+  padding: 12px;
+}
+
+mat-card-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+}
+
+mat-card-content {
+  padding: 12px;
+}
+
+p {
+  margin: 0;
+}
+
+.weather-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.weather-property {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.property-label {
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.property-value {
+  font-weight: normal;
+}

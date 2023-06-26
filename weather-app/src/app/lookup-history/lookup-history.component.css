@@ -1,0 +1,30 @@
+table {
+  min-width: 50%;
+  background-color: white;
+  margin: 20px 250px 50px 400px;
+  text-align: center;
+}
+
+th,
+td {
+  text-align: center;
+}
+caption {
+  font-size: 1.5em;
+  font-weight: bolder;
+  margin-bottom: 25px;
+  margin-top: 20px;
+}
+
+tr.mat-row {
+  margin-bottom: 10px;
+}
+
+td.mat-cell {
+  padding: 5px;
+}
+
+.pagination-container {
+  align-items: center;
+  text-align: center;
+}

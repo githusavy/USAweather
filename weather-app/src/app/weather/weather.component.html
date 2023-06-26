@@ -1,0 +1,45 @@
+<div>
+  <div class="title-card">
+    <h1 class="title">USA Weather Explorer: Capitals Edition</h1>
+    <mat-form-field class="select-wrapper">
+      <mat-label>Select a city</mat-label>
+      <mat-select [(value)]="selectedCity" (selectionChange)="onCityChange()">
+        <mat-option *ngFor="let city of cities" [value]="city">{{
+          city
+        }}</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+
+  <h2 class="section-title" *ngIf="weatherData">
+    Current Weather for {{ selectedCity }}
+  </h2>
+
+  <div *ngIf="weatherData" class="card-container">
+    <mat-card *ngFor="let property of weatherProperties">
+      <mat-card-header>
+        <mat-card-title
+          matTooltip="{{ property.description }}"
+          matTooltipPosition="right"
+          >{{ property.label }}
+          <i [class]="property.icon"></i>
+        </mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <span class="property-value">{{ property.value }}</span>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  <div *ngIf="weatherData" class="graph-container">
+    <app-chart
+      [hourlyData]="weatherData.hourly"
+      [selectedCity]="selectedCity"
+    ></app-chart>
+  </div>
+
+  <div *ngIf="airQualityData" class="graph-container">
+    <app-chart [airQualityData]="airQualityData.hourly"></app-chart>
+  </div>
+
+  <app-lookup-history [lookupHistory]="lookupHistory"></app-lookup-history>
+</div>

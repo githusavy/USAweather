@@ -1,0 +1,40 @@
+<h2 class="section-title" *ngIf="hourlyData">
+  Forecast for {{ selectedCity }} for {{ selectedDate }}
+</h2>
+<div *ngIf="hourlyData" class="chart-container">
+  <canvas
+    class="chart1"
+    baseChart
+    [datasets]="lineChartData"
+    [labels]="lineChartLabels"
+    [options]="lineChartOptions"
+    [legend]="lineChartLegend"
+    [type]="lineChartType"
+  >
+  </canvas>
+  <mat-form-field class="select-wrapper">
+    <mat-label>Select Forecast Days</mat-label>
+    <mat-select [(value)]="selectedDay" (selectionChange)="onForecastChange()">
+      <mat-option *ngFor="let day of forecastDays" [value]="day">{{
+        day
+      }}</mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>
+
+<h2 *ngIf="airQualityData" class="section-title">
+  Air Quality for {{ selectedCity }} for 5 days
+</h2>
+
+<div *ngIf="airQualityData" class="chart-container">
+  <canvas
+    class="chart2"
+    baseChart
+    [datasets]="lineChartDataAirQuality"
+    [labels]="lineChartLabelsAirQuality"
+    [options]="lineChartOptions"
+    [legend]="lineChartLegend"
+    [type]="lineChartType"
+  >
+  </canvas>
+</div>
