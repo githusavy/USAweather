@@ -31,3 +31,15 @@ This repository contains two folders: `API` and `weather-app`. The `API` folder 
        ng serve
        The weather app will be accessible at http://localhost:4200.
     
+=====================================================================================================================================
+
+  USA Weather Explorer: Capitals Edition
+
+1. The app allows the user to select weather information for the capital cities in USA.
+2. The user can select the capital city of his choice to see the weather information
+3. By default on applciation load, it shows the weather for city 'Montgomery'
+4. Current weather information is shown with the corresponding icons changed based on the weather type (eg clear sky, rainfall etc.)
+5. Weather forecast for 1 day is shown by default. But user can select the dropdown to select the number of forecast days
+6. Air quality information for the city is shown for 5 days by deafult.
+7. History of weather data lookup shows the searched cities and the time they are searched.
+8. The history is shown in a tabular format paginated with 10 entires per page.
