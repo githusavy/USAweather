@@ -31,7 +31,7 @@ This repository contains two folders: `API` and `weather-app`. The `API` folder 
        ng serve
        The weather app will be accessible at http://localhost:4200.
     
-=====================================================================================================================================
+===================================================================================================
 
   USA Weather Explorer: Capitals Edition
 
